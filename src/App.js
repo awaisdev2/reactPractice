@@ -1,27 +1,18 @@
 import './App.css';
 import About from './component/About';
 import Navbar from './component/Navbar';
-import TextForm from './component/TextForm';
-import React, { useState } from 'react'
+import TextForm from './component/Textform';
+// import { useState } from 'react';
+import React from 'react'
 
 
 function App() {
 
-  const [mode, setMode] = useState('light');
-  const toggleDarkMode = ()=>{
-    if(mode === 'dark'){
-      setMode('light')
-    }
-    else{
-      setMode('dark')
-    }
-  }
-
   return (
     <>
-      <Navbar title="Textutils" home="Home" mode={mode} toggleDarkMode={toggleDarkMode} />
-      <TextForm />
-      <About />
+    <Navbar title="TextUtils" first_page="Home"/>
+    <TextForm />
+    <About />
     </>
   );
 }
